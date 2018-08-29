@@ -1,7 +1,7 @@
 var express = require('express');
 var configure = require("./Server/configure");
 var Mongoose = require("mongoose");
-var uri = process.env.MONGOLAB_URI
+var uri = process.env.MONGOLAB_URI;
 
 Mongoose.connect(uri);
 Mongoose.connection.on("open" , function(err){
