@@ -1,8 +1,9 @@
 var express = require('express');
 var configure = require("./Server/configure");
 var Mongoose = require("mongoose");
+var uri = process.env.MONGOLAB_URI
 
-Mongoose.connect("mongodb://Emir28107:MuskanEmir143@ds237072.mlab.com:37072/imcha");
+Mongoose.connect(uri);
 Mongoose.connection.on("open" , function(err){
     if(err) throw err;
     console.log("Mongoose is Connected");
