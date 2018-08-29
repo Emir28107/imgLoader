@@ -43,8 +43,12 @@ window.onload = function()
              XHR.send();
 
              XHR.addEventListener("loadend" , function(ev){
-                 console.log("Load End Correspondingly ends it's work");
-             });
+                 console.log("Load End Correspondingly ends it's work" , XHR.status);
+                 if(XHR.status === 301){
+                     window.location.reload();
+                 }    
+            });
+             
            }
         });
 };

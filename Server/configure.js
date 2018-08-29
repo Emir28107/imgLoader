@@ -3,6 +3,7 @@ var path = require("path");
 var moment = require("moment");
 var express3_handlebars = require("express-handlebars");
 var routes = require("./router");
+var fs = require("fs");
 
 module.exports = function(app) { 
 
@@ -40,5 +41,16 @@ module.exports = function(app) {
 
     routes.initialize(app);
   //  console.log("i m right now at the end of configure.js file");
+
+    fs.exists(path.join(__dirname , "../public/upload/temp") , function(exist){
+             if(!exist){
+                     fs.mkdir(path.join(__dirname , "../Public/upload")  , function(err){
+                             console.log(err);
+                             fs.mkdir(path.join(__dirname , "../Public/upload/temp") , function(err){
+                                     console.log(err);
+                             });
+                     });
+             }
+    });
     return app;
 };

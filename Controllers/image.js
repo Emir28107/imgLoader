@@ -120,7 +120,8 @@ module.exports = {
                              if(err) throw err;
                              image.remove(function(err){
                                if(err) throw err;
-                               res.redirect("/");  
+                             //  req.method = "GET";
+                              res.send(301 , "Done!!");  
                              })
                          });
                      });
