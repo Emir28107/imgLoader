@@ -3,6 +3,10 @@ var configure = require("./Server/configure");
 var Mongoose = require("mongoose");
 var uri = "mongodb://Emir28107:MuskanEmir143@ds237072.mlab.com:37072/imcha";
 
+if(process.env.NODE_ENV !== "production") {
+    require("dotenv").config();
+}
+
 Mongoose.connect(uri);
 Mongoose.connection.on("open" , function(err){
     if(err) throw err;
