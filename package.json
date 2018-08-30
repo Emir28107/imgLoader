@@ -9,6 +9,9 @@
   },
   "author": "Emir Sarrafoglu",
   "license": "ISC",
+  "engines" : {
+    "node" : "8.11.3"
+  }
   "dependencies": {
     "MD5": "^1.3.0",
     "async": "^2.6.1",
