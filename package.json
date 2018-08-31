@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "test": "mocha -r test/testhelper.js -R spec test/**/*.test.js",
-    "heroku-prebuild" : "yarn install --production=false"
+    "test": "mocha -r test/testhelper.js -R spec test/**/*.test.js"
   },
   "author": "Emir Sarrafoglu",
   "license": "ISC",
