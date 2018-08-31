@@ -1,8 +1,7 @@
 var express = require('express');
 var configure = require("./Server/configure");
 var Mongoose = require("mongoose");
-var uri = process.env.MONGOLAB_AMBER_URI;
-
+var uri = process.env.MONGOLAB_AMBER_URI ;
 if(process.env.NODE_ENV !== "production") {
     require("dotenv").config();
 }
@@ -14,6 +13,7 @@ Mongoose.connection.on("open" , function(err){
 });
 
 var app = express();
+var port = process.env.PORT || 3300;
 
 app.set("port" , process.env.PORT || 3300);
 app.set("views" , __dirname + '/Views');
