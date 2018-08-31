@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "test": "mocha -r test/testhelper.js -R spec test/**/*.test.js"
+    "test": "mocha -r test/testhelper.js -R spec test/**/*.test.js",
+    "heroku-prebuild" : "yarn install --production=false"
   },
   "author": "Emir Sarrafoglu",
   "license": "ISC",
@@ -19,10 +20,7 @@
     "express": "^3.5.3",
     "express-handlebars": "^3.0.0",
     "moment": "^2.22.2",
-    "mongoose": "^5.2.9",
-    "nodebb-plugin-dbsearch": "0.0.10",
-    "redis": "~0.10.1",
-    "connect-redis": "~2.0.0"
+    "mongoose": "^5.2.9"
   },
   "devDependencies": {
     "chai": "^4.1.2",
