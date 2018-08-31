@@ -13,7 +13,7 @@ Mongoose.connection.on("open" , function(err){
 });
 
 var app = express();
-var port = process.env.PORT || 3300;
+var port = process.env["PORT"] || 3300;
 
 app.set("port" , process.env.PORT || 3300);
 app.set("views" , __dirname + '/Views');
