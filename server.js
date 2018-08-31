@@ -1,7 +1,7 @@
 var express = require('express');
 var configure = require("./Server/configure");
 var Mongoose = require("mongoose");
-var uri = process.env.MONGODB_URI;
+var uri = process.env.MONGOLAB_AMBER_URI;
 
 if(process.env.NODE_ENV !== "production") {
     require("dotenv").config();
