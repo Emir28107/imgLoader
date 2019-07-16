@@ -3,7 +3,7 @@ var proxyquire , expressStub , configStub , mongooseStub;
    var app , server = function() {
         proxyquire("../../server.js" , {
             "express" : expressStub,
-            "./server/configure" : configStub,
+            "./Server/configure" : configStub,
             "mongoose" : mongooseStub
         });
     };
