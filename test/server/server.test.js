@@ -42,10 +42,7 @@ describe("server" , function(){
            server();
            expect(configStub).to.be.calledWith(app);
        });
-       it("should connect with mongoose" , function(){
-           server();
-           expect(mongooseStub.connect).to.be.calledWith(sinon.match.string);
-       });
+       
        it("should launch the app " , function(){
            server();
            expect(app.get).to.be.calledWith("port");
